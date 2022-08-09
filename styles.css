@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+:root {
+    /* Catetan buat variables satu website */
+    --font-family:'Montserrat', sans-serif;
+    --color1:#F8F0ED;
+    --color2:#E8D6CD;
+    --color3:#4C342f;
+    --color4:#ac9d8a;
+}
+
+.section-margin {
+    /* Spacing */
+    margin:2rem 4rem;
+}
+
+.section-padding {
+    /* Margins */
+    padding:2rem 4rem;
+}
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    /* Biar 0 spacing dari awal */
+}
+
+.pageBody {
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+    align-items:center;
+}
+
+/* NavBar Section */
+.navbar-container {
+    /*Takes up  100% of the browser's view width */
+    width:100vw;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    /* Push the items away from each other as far as possible */
+    padding:2rem;
+    background-color:var(--color1);
+}
+
+.logo {
+    width:70px;
+    height:70px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbarLogo {
+    width:100%;
+    height:100%;
+}
+
+.navbar-list {
+    display:flex;
+    gap:2rem;
+    list-style:none;
+}
+
+.list-item a{
+    text-decoration:none;
+    color:var(--color3);
+    font-family:var(--font-family);
+    font-weight:bold;
+}
+
+/* Banner & Hero-Section */
+.banner-container{
+    width:100vw;
+}
+
+.banner-image {
+    width:100%;
+    object-fit:contain;
+}
+
+/* Brown Page Container */
+
+    .brown-container{
+        margin:50px 0px;
+        width:50%;
+        display:flex;
+        flex-direction:column;
+        gap:3rem;
+        align-items:center;
+        justify-content:center;
+        background-color:var(--color1);
+        padding:3rem 2rem;
+    }
+
+    /* Carousell */
+    .carousell {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:1rem;
+        background-color: var(--color2);
+        padding:2rem;
+        width:100vw;
+    }
+
+    .carousel-image-container {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        min-width:20vw;
+    }
+
+    .carousel-image {
+        width:100%;
+    }
+
+    /* Inner Content */
+    .article-container {
+        display:flex;
+        gap:1rem;
+        justify-content: center;
+        padding:2rem 0rem;
+    }
+
+    .article-image-container {
+        width:200px;
+    }
+
+    .article-image {
+        width:100%;
+    }
+
+    .reverse {
+        flex-direction:row-reverse;
+    }
+
+    .article2 {
+        max-width:50%;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+    }
+
+    .article2 p {
+        font-size:15px;
+        color:var(--color3);
+        font-family:var(--font-family);
+    }
+
+    .btn-primary {
+        color:white;
+        background-color:var(--color4);
+        padding:0.5rem 1.5rem;
+        border-radius:10px;
+        margin-top:1rem;
+        border:none;
+        outline:none;
+        width:fit-content;
+    }
+
+    .btn-primary a {
+        text-decoration:none;
+        color:white;
+        font-weight:bold;
+    }
+
+    footer {
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        background-color:var(--color1);
+    }
+
+    .logo2 {
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        width: 20vw;
+    }
+
+    .logo2 img {
+        width:100%;
+    }
+
+    footer h3 {
+        font-family:var(--font-family);
+        font-weight:regular;
+    }
+
+/* Media Queries */
+
+    /* Tablets */
+    @media screen and (max-width:895px){
+        /* NavBar */
+        .logo {
+            width:40px;
+            height:40px;
+        }
+
+        .navbar-list {
+            gap:1rem;
+        }
+
+        .list-item a {
+            font-size:12px;
+        }
+
+        /* Articles */
+        .brown-container{
+            padding:1rem 2rem;
+            gap:0.8rem;
+        }
+
+        .article2 p {
+            font-size:11px;
+        }
+
+        /* Carousel */
+        .carousel-image-container {
+            width:270px;
+        }
+    }
+
+    /* Smartphones */
+    @media screen and (max-width:701px){
+        .logo {
+            width:30px;
+            height:30px;
+        }
+
+        .brown-container{
+            max-width:80vw;
+            min-width:70vw;
+        }
+
+        .article2 {
+            min-width:60vw;
+        }
+
+        .article2 p {
+            font-size:10px;
+            line-height:14px;
+            width:70%;
+        }
+
+        .article-container {
+            text-align:center;
+            flex-direction:column;
+            align-items: center;
+            padding:3rem 0rem;
+        }
+
+        .article2 {
+            align-items:center;
+        }
+
+        .carousel-image-container {
+            width:200px;
+        }
+
+        footer h3 {
+            font-size:12px;
+        }
+
+    }
+
+    /* Even Smaller Phones :) */
+    @media screen and (max-width:400px){
+        .navbar-list {
+            gap:0.5rem;
+        }
+        
+        .list-item{
+            font-size:10px;
+        }
+
+        .brown-container{
+            max-width:80vw;
+            min-width:70vw;
+        }
+
+        .carousell{
+            flex-direction:column;
+            width:fit-content;
+        }
+
+        footer h3 {
+            font-size:8px;
+        }
+    }
